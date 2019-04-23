@@ -1,4 +1,4 @@
-const user = require('../models/users')
+const users = require('../models/users')
 let id = 1
 
 module.exports = {
@@ -7,7 +7,7 @@ module.exports = {
     const { session } = req;
     const { username, password } = req.body;
 
-    user.push({ id, username, password })
+    users.push({ id, username, password })
     id++;
     session.user.username = username;
 
